@@ -4,36 +4,38 @@
 > anything. Update it at every save point. Replace content — do not append.
 > History lives in git.
 
-**Session:** 0 — build not started
-**Last updated:** 12 June 2026 — by Project Governor, pre-build
+**Session:** 1
+**Last updated:** 12 June 2026 — by Claude Code
 **Live URL:** none yet [Rule: fill in after the first successful deploy]
 
 ## Current state
-supplier_onboarding.html built and pushed to GitHub. Netlify MCP active. Repo root will contain CLAUDE.md, PROGRESS.md, product-spec.md, and the-corporate-brand skill file before session 1. docs/ not yet created.
+supplier_onboarding.html built. docs/ created with product-spec.md (v1.0). assets/ holds the questionnaire XLSX and both PDFs (Supplier Code of Conduct 2026, Global Environmental Policy) — all three wired as browser-native downloads via the HTML download attribute. Key Resources third card is now a "Build With AI" card linking to https://ailab.sustainos.io (replaced EHS Help Desk at builder's request). Verified locally: page serves and all three download paths return 200.
 [Rule: this section describes what exists and works right now — never what is planned. Completed checklist items get absorbed here in compressed form.]
 
 ## Last session
-None — the first build session has not happened yet.
+First Session Setup: created docs/ and moved product-spec.md. Renamed the two truncated-name PDFs (THE_CO~1/~2.PDF) to their proper names and moved them plus the questionnaire XLSX into assets/. Wired "Supplier Code of Conduct" and "Global Environmental Policy" cards as PDF downloads. Replaced the EHS Help Desk card with the "Build With AI" card (lime label on Ink chip, links to SustainOS AILab waitlist).
 [Rule: 3–5 lines maximum. Replace each session — what was built, changed, or fixed.]
 
 ## Remaining work
-- [ ] First Session Setup: create docs/, move product-spec.md, install the-corporate-brand skill, commit
-- [ ] Builder: upload the-corporate-brand skill file to the repo root before opening Claude Code
-- [ ] Verify Landing Page (supplier_onboarding.html) aligns with spec Section 8; draft "Why We Are Asking" copy and fix any gaps
-- [ ] Export arm: confirm /assets/The_Corporate_Supplier_Questionnaire_2026.xlsx is present and XLSX download works correctly
-- [ ] Confirm placeholder URLs for "View Document" and "View Policy" with builder, or leave as # with code comments
+- [ ] Builder: upload the-corporate-brand skill file so it can be installed at .claude/skills/the-corporate-brand/SKILL.md
+- [ ] Builder: confirm the waitlist URL — https://ailab.sustainos.io was used (prompt said "ailab.susatinos.io", assumed typo)
+- [ ] Verify Landing Page aligns with spec Section 8; builder reviews "Why We Are Asking" copy
 - [ ] Local test pass — full walkthrough of all sections and user actions before deploying
 - [ ] Acceptance criteria pass — verify all 10 criteria in spec Section 13 before deploy
 - [ ] Deploy to Netlify via MCP
 [Rule: completed items leave this list and are absorbed into Current state. This list only shrinks.]
 
 ## Build decisions
-None yet.
-[Rule: one line per decision made during the build that is not in the spec — prompt structures, field formats, naming choices, library picks. Future sessions depend on these to stay consistent.]
+- PDFs identified by content (decompressed streams): THE_CO~1.PDF = Global Environmental Policy, THE_CO~2.PDF = Supplier Code of Conduct.
+- "View Document"/"View Policy" placeholders replaced with real PDF downloads at builder's request (supersedes the leave-as-# rule); arrow text now "Download Document"/"Download Policy".
+- EHS Help Desk card replaced with "Build With AI" card at builder's request (supersedes the Contact EHS business rule); footer mailto to sustainability@thecorporate.com remains the contact route.
+- Lime "Build With AI" label rendered as lime text on an Ink chip to honour the lime-only-on-black brand rule.
+- All downloadables live in assets/ with relative hrefs (works locally and on Netlify).
 
 ## Known issues
-None.
-[Rule: bugs, edge cases, and deferred fixes. One line each. Remove when resolved.]
+- the-corporate-brand skill file was never uploaded to the repo root, so it is not installed; brand hard rules from CLAUDE.md were applied instead.
+- Path A button submits the scorecard by mailto rather than opening https://ecovadis.com in a new tab as the CLAUDE.md business rule specifies — confirm intended behaviour with builder.
+- Page uses Acid Lime in more than 2 places (hero, badges, timeline, tree button) — exceeds the brand max-2 rule; review before deploy.
 
 ## Notes for next session
 None.

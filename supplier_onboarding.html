@@ -589,6 +589,22 @@
     color: var(--tc-stone);
     margin-top: var(--tc-space-sm);
   }
+  /* Brand rule: Acid Lime only on black — lime text inside an Ink chip */
+  .link-card-tag {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--tc-ink);
+    padding: 3px 10px;
+    margin-top: var(--tc-space-sm);
+  }
+  .link-card-tag span {
+    font-family: var(--tc-font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tc-lime);
+  }
   .link-card-title {
     font-size: 14px;
     font-weight: 500;
@@ -932,7 +948,7 @@
           <br><br>
           Estimated time: <strong style="color:var(--tc-ink); font-weight:500;">45–60 minutes</strong>
         </div>
-        <a href="The_Corporate_Supplier_Questionnaire_2026.xlsx" download class="tc-btn-secondary" style="width:100%; text-align:center; display:block; padding:14px;">
+        <a href="assets/The_Corporate_Supplier_Questionnaire_2026.xlsx" download class="tc-btn-secondary" style="width:100%; text-align:center; display:block; padding:14px;">
           Download Questionnaire (Excel)
         </a>
         <p style="font-size:11px; color:var(--tc-stone); letter-spacing:0.08em; margin-top:10px; text-align:center;">
@@ -993,7 +1009,7 @@
 
     <div class="links-grid">
 
-      <a href="#" class="link-card">
+      <a href="assets/The_Corporate_Supplier_Code_of_Conduct_2026.pdf" download class="link-card">
         <div class="link-card-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
@@ -1004,12 +1020,12 @@
           All Tier 1 suppliers must have a signed copy on file.
         </div>
         <div class="link-card-arrow">
-          View Document
+          Download Document
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
       </a>
 
-      <a href="#" class="link-card">
+      <a href="assets/The_Corporate_Global_Environmental_Policy.pdf" download class="link-card">
         <div class="link-card-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
@@ -1020,23 +1036,23 @@
           the framework that defines what we expect from our value chain partners.
         </div>
         <div class="link-card-arrow">
-          View Policy
+          Download Policy
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
       </a>
 
-      <a href="mailto:sustainability@thecorporate.com?subject=Supplier Portal Help Desk Query" class="link-card">
+      <a href="https://ailab.sustainos.io" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-card-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <div class="link-card-label">Support</div>
-        <div class="link-card-title">EHS Help Desk</div>
+        <div class="link-card-tag"><span>Build With AI</span></div>
+        <div class="link-card-title">Want to build this yourself?</div>
         <div class="link-card-desc">
-          Questions about specific ESRS requirements, measurement methodology, or technical
-          aspects of the questionnaire? Contact our Environment, Health &amp; Safety team directly.
+          This tool was built by a sustainability professional with zero coding
+          background — in the SustainOS AILab. Build yours.
         </div>
         <div class="link-card-arrow">
-          Contact EHS
+          Join the Waitinglist
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
       </a>
