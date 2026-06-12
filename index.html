@@ -589,22 +589,6 @@
     color: var(--tc-stone);
     margin-top: var(--tc-space-sm);
   }
-  /* Brand rule: Acid Lime only on black — lime text inside an Ink chip */
-  .link-card-tag {
-    display: inline-block;
-    align-self: flex-start;
-    background: var(--tc-ink);
-    padding: 3px 10px;
-    margin-top: var(--tc-space-sm);
-  }
-  .link-card-tag span {
-    font-family: var(--tc-font-body);
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--tc-lime);
-  }
   .link-card-title {
     font-size: 14px;
     font-weight: 500;
@@ -629,6 +613,15 @@
     gap: 6px;
   }
   .link-card-arrow svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+  /* SustainOS AILab card — Electric Purple is builder-specified, outside The Corporate palette */
+  .link-card--ailab { background: #6E6CFF; border: none; }
+  .link-card--ailab .link-card-icon { border-color: rgba(255,255,255,0.4); }
+  .link-card--ailab .link-card-icon svg { stroke: var(--tc-white); }
+  .link-card--ailab .link-card-label,
+  .link-card--ailab .link-card-title,
+  .link-card--ailab .link-card-desc { color: var(--tc-white); }
+  .link-card--ailab .link-card-arrow { color: var(--tc-lime); }
 
   /* ── TIMELINE ─────────────────────────────────────────────────────────── */
   .section-timeline { padding: var(--tc-space-3xl) 0; background: var(--tc-white); }
@@ -686,6 +679,32 @@
     text-transform: uppercase;
     color: var(--tc-stone);
   }
+
+  /* SustainOS AILab cards — Terracotta and Electric Purple are builder-specified,
+     outside The Corporate palette */
+  .timeline-step--terracotta { background: #D4622A; }
+  .timeline-step--terracotta .timeline-step-num,
+  .timeline-step--terracotta .timeline-step-title,
+  .timeline-step--terracotta .timeline-step-body,
+  .timeline-step--terracotta .timeline-step-date { color: var(--tc-white); }
+
+  .timeline-step--purple { background: #6E6CFF; }
+  .timeline-step--purple .timeline-step-num { color: var(--tc-lime); }
+  .timeline-step--purple .timeline-step-title,
+  .timeline-step--purple .timeline-step-body { color: var(--tc-white); }
+
+  .timeline-step-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tc-lime);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .timeline-step-cta svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
   /* ── FOOTER ──────────────────────────────────────────────────────────── */
   .footer {
@@ -966,36 +985,42 @@
   </div>
 </section>
 
-<!-- ── TIMELINE ───────────────────────────────────────────────────────────── -->
+<!-- ── SUSTAINOS AILAB ────────────────────────────────────────────────────── -->
 <section class="section-timeline" id="timeline">
   <div class="tc-page">
-    <p class="tc-subhead mb-md">Programme Timeline</p>
-    <h2 class="tc-h2">What happens next.</h2>
+    <p class="tc-subhead mb-md">SustainOS AILab</p>
+    <h2 class="tc-h2">I built this. No coding background.</h2>
+    <p class="tc-body mt-md" style="color:var(--tc-stone);">
+      A sustainability manager who learned to build real web tools. You can too.
+    </p>
 
     <div class="timeline mt-xl">
       <div class="timeline-step active">
         <div class="timeline-step-num">01</div>
-        <div class="timeline-step-title">Portal Launch</div>
-        <div class="timeline-step-body">You receive this link and select your submission path.</div>
-        <div class="timeline-step-date">April 2026</div>
+        <div class="timeline-step-title">The Proof</div>
+        <div class="timeline-step-body">You just used a tool built by a sustainability professional with zero coding background. Six workshops. Real deployment.</div>
+        <div class="timeline-step-date">SustainOS AILab</div>
       </div>
       <div class="timeline-step">
         <div class="timeline-step-num">02</div>
-        <div class="timeline-step-title">Data Submission</div>
-        <div class="timeline-step-body">Submit scorecard or complete questionnaire. 100% Tier 1 response required.</div>
-        <div class="timeline-step-date">Deadline: 30 Sep 2026</div>
+        <div class="timeline-step-title">Think Like an Architect</div>
+        <div class="timeline-step-body">You don't need to become a developer. You need to become an architect. Spec the tool, direct the build, ship the MVP. Then keep going.</div>
+        <div class="timeline-step-date">Not Your Last Build</div>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step timeline-step--terracotta">
         <div class="timeline-step-num">03</div>
-        <div class="timeline-step-title">Review & Scoring</div>
-        <div class="timeline-step-body">Our EHS and Procurement teams review submissions and flag gaps.</div>
-        <div class="timeline-step-date">Q4 2026</div>
+        <div class="timeline-step-title">Cohort 1 Is Full</div>
+        <div class="timeline-step-body">The first cohort is wrapping up. Limited spots were gone quickly.</div>
+        <div class="timeline-step-date">Closing Soon</div>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step timeline-step--purple">
         <div class="timeline-step-num">04</div>
-        <div class="timeline-step-title">Partnership Plans</div>
-        <div class="timeline-step-body">Joint decarbonisation and improvement plans agreed with prioritised suppliers.</div>
-        <div class="timeline-step-date">Q1 2027</div>
+        <div class="timeline-step-title">Cohort 2 Waitlist</div>
+        <div class="timeline-step-body">Cohort 2 is forming now. Get early access and priority registration.</div>
+        <a href="https://ailab.sustainos.io" target="_blank" rel="noopener noreferrer" class="timeline-step-cta">
+          Join the Waitlist
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1041,18 +1066,18 @@
         </div>
       </a>
 
-      <a href="https://ailab.sustainos.io" target="_blank" rel="noopener noreferrer" class="link-card">
+      <a href="https://ailab.sustainos.io" target="_blank" rel="noopener noreferrer" class="link-card link-card--ailab">
         <div class="link-card-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
         </div>
-        <div class="link-card-tag"><span>Build With AI</span></div>
+        <div class="link-card-label">Build With AI</div>
         <div class="link-card-title">Want to build this yourself?</div>
         <div class="link-card-desc">
-          This tool was built by a sustainability professional with zero coding
-          background — in the SustainOS AILab. Build yours.
+          This tool was built by a sustainability professional with zero coding background.
+          In the SustainOS AILab, you'll build tools like this in 6 workshops.
         </div>
         <div class="link-card-arrow">
-          Join the Waitinglist
+          Join the Cohort
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
       </a>
