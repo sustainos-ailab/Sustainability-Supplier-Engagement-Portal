@@ -6,10 +6,10 @@
 
 **Session:** 1
 **Last updated:** 12 June 2026 — by Claude Code
-**Live URL:** none yet [Rule: fill in after the first successful deploy]
+**Live URL:** https://sustainability-supplier-engagement-po.netlify.app
 
 ## Current state
-supplier_onboarding.html built. docs/ created with product-spec.md (v1.0). the-corporate-brand skill installed at .claude/skills/the-corporate-brand/SKILL.md. assets/ holds the questionnaire XLSX and both PDFs (Supplier Code of Conduct 2026, Global Environmental Policy) — all three wired as browser-native downloads via the HTML download attribute. Key Resources third card is now a "Build With AI" card linking to https://ailab.sustainos.io (replaced EHS Help Desk at builder's request). Verified locally: page serves and all three download paths return 200.
+Landing page built and renamed supplier_onboarding.html → index.html so Netlify serves it at the site root. docs/ created with product-spec.md (v1.0). the-corporate-brand skill installed at .claude/skills/the-corporate-brand/SKILL.md. assets/ holds the questionnaire XLSX and both PDFs (Supplier Code of Conduct 2026, Global Environmental Policy) — all three wired as browser-native downloads via the HTML download attribute. Key Resources third card is now a "Build With AI" card linking to https://ailab.sustainos.io (replaced EHS Help Desk at builder's request). Verified locally: page serves and all three download paths return 200.
 [Rule: this section describes what exists and works right now — never what is planned. Completed checklist items get absorbed here in compressed form.]
 
 ## Last session
