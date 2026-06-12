@@ -6,10 +6,10 @@
 
 **Session:** 1
 **Last updated:** 12 June 2026 — by Claude Code
-**Live URL:** none yet [Rule: fill in after the first successful deploy]
+**Live URL:** https://sustainability-supplier-engagement-po.netlify.app
 
 ## Current state
-supplier_onboarding.html built. docs/ created with product-spec.md (v1.0). assets/ holds the questionnaire XLSX and both PDFs (Supplier Code of Conduct 2026, Global Environmental Policy) — all three wired as browser-native downloads via the HTML download attribute. Key Resources third card is now a "Build With AI" card linking to https://ailab.sustainos.io (replaced EHS Help Desk at builder's request). Verified locally: page serves and all three download paths return 200.
+Landing page built and renamed supplier_onboarding.html → index.html so Netlify serves it at the site root. docs/ created with product-spec.md (v1.0). the-corporate-brand skill installed at .claude/skills/the-corporate-brand/SKILL.md. assets/ holds the questionnaire XLSX and both PDFs (Supplier Code of Conduct 2026, Global Environmental Policy) — all three wired as browser-native downloads via the HTML download attribute. Key Resources third card is now a "Build With AI" card linking to https://ailab.sustainos.io (replaced EHS Help Desk at builder's request). Verified locally: page serves and all three download paths return 200.
 [Rule: this section describes what exists and works right now — never what is planned. Completed checklist items get absorbed here in compressed form.]
 
 ## Last session
@@ -17,7 +17,6 @@ First Session Setup: created docs/ and moved product-spec.md. Renamed the two tr
 [Rule: 3–5 lines maximum. Replace each session — what was built, changed, or fixed.]
 
 ## Remaining work
-- [ ] Builder: upload the-corporate-brand skill file so it can be installed at .claude/skills/the-corporate-brand/SKILL.md
 - [ ] Builder: confirm the waitlist URL — https://ailab.sustainos.io was used (prompt said "ailab.susatinos.io", assumed typo)
 - [ ] Verify Landing Page aligns with spec Section 8; builder reviews "Why We Are Asking" copy
 - [ ] Local test pass — full walkthrough of all sections and user actions before deploying
@@ -33,7 +32,6 @@ First Session Setup: created docs/ and moved product-spec.md. Renamed the two tr
 - All downloadables live in assets/ with relative hrefs (works locally and on Netlify).
 
 ## Known issues
-- the-corporate-brand skill file was never uploaded to the repo root, so it is not installed; brand hard rules from CLAUDE.md were applied instead.
 - Path A button submits the scorecard by mailto rather than opening https://ecovadis.com in a new tab as the CLAUDE.md business rule specifies — confirm intended behaviour with builder.
 - Page uses Acid Lime in more than 2 places (hero, badges, timeline, tree button) — exceeds the brand max-2 rule; review before deploy.
 
