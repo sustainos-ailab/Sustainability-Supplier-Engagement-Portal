@@ -13,7 +13,7 @@ Landing page built and renamed supplier_onboarding.html → index.html so Netlif
 [Rule: this section describes what exists and works right now — never what is planned. Completed checklist items get absorbed here in compressed form.]
 
 ## Last session
-Restyled the Key Resources "Build With AI" card per builder spec: Electric Purple #6E6CFF fill, no border, white terminal icon, white label/title/body, lime "Join the Cohort" CTA. Replaced the Programme Timeline section with the SustainOS AILab section — new label, headline, subline, and four cards reusing the timeline grid (Ink/lime, neutral, Terracotta #D4622A, Electric Purple with lime waitlist CTA). Cards 1 and 2 of Key Resources untouched.
+Page-wide contrast fix: repointed the unused --tc-text-muted alias to #555 and switched all muted text on LIGHT backgrounds to it (subheads, labels, card bodies/desc/arrows, tree path text, timeline neutral card, Why/tree inline paras). Left Stone (#B6B09F) on dark backgrounds (nav, hero, dark question card, active timeline card, footer) — #555 there would kill contrast. Reworked the SustainOS AILab section: section label is now an animated pill badge (lime border + transparent bg + pulsing lime ● dot, 1.5s ease-in-out); new headline "I built this supplier engagement portal. Zero coding."; new subline; updated card 1/2 bodies and card 3 tag (Closing Soon → Registration Closed). Card 4 unchanged.
 [Rule: 3–5 lines maximum. Replace each session — what was built, changed, or fixed.]
 
 ## Remaining work
@@ -30,6 +30,8 @@ Restyled the Key Resources "Build With AI" card per builder spec: Electric Purpl
 - Electric Purple #6E6CFF and Terracotta #D4622A used per explicit builder spec — outside The Corporate palette; flagged in CSS comments.
 - Programme Timeline section replaced with SustainOS AILab promo section at builder's request (supersedes spec timeline content); section id "timeline" kept.
 - Waitlist URL https://ailab.sustainos.io confirmed by builder in the session-2 change spec.
+- Muted text contrast: --tc-text-muted now resolves to #555 (was Stone) and is applied only to light-background text; dark-background text keeps Stone deliberately (darkening it would reduce contrast).
+- SustainOS section label uses an animated lime pill badge per builder spec — lime border + lime ● dot sit on a light surface, an intentional exception to the lime-only-on-black brand rule.
 - All downloadables live in assets/ with relative hrefs (works locally and on Netlify).
 
 ## Known issues

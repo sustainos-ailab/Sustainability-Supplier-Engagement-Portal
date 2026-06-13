@@ -26,7 +26,7 @@
     --tc-bg-surface:   var(--tc-linen);
     --tc-bg-elevated:  var(--tc-white);
     --tc-text-primary: var(--tc-ink);
-    --tc-text-muted:   var(--tc-stone);
+    --tc-text-muted:   #555; /* Contrast fix: muted text on light surfaces (was Stone #B6B09F — too faint) */
     --tc-border:       rgba(182, 176, 159, 0.35);
     --tc-border-strong: var(--tc-stone);
 
@@ -91,7 +91,7 @@
     line-height: 1.4;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
   }
   .tc-body {
     font-family: var(--tc-font-body);
@@ -107,7 +107,7 @@
     line-height: 1.5;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
   }
 
   /* ── Buttons ─────────────────────────────────────────────────────────── */
@@ -157,7 +157,7 @@
     text-transform: uppercase;
     text-decoration: none;
     background: transparent;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     border: 0.5px solid var(--tc-border-strong);
     border-radius: 0;
     padding: 12px 28px;
@@ -377,7 +377,7 @@
     font-size: 13px;
     font-weight: 300;
     line-height: 1.7;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
   }
 
   /* ── DECISION TREE ───────────────────────────────────────────────────── */
@@ -500,7 +500,7 @@
   .tree-path-badge.badge-b {
     background: var(--tc-chalk);
   }
-  .tree-path-badge.badge-b span { color: var(--tc-stone); }
+  .tree-path-badge.badge-b span { color: var(--tc-text-muted); }
 
   .tree-path-title {
     font-family: var(--tc-font-body);
@@ -513,7 +513,7 @@
     font-family: var(--tc-font-body);
     font-size: 13px;
     font-weight: 300;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     line-height: 1.7;
     margin-bottom: var(--tc-space-lg);
   }
@@ -529,7 +529,7 @@
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -586,7 +586,7 @@
     font-weight: 400;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     margin-top: var(--tc-space-sm);
   }
   .link-card-title {
@@ -598,14 +598,14 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 1.6;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     flex: 1;
   }
   .link-card-arrow {
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     margin-top: var(--tc-space-sm);
     transition: transform 0.15s ease;
     display: flex;
@@ -670,14 +670,14 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 1.6;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
     margin-bottom: var(--tc-space-sm);
   }
   .timeline-step-date {
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--tc-stone);
+    color: var(--tc-text-muted);
   }
 
   /* SustainOS AILab cards — Terracotta and Electric Purple are builder-specified,
@@ -705,6 +705,33 @@
     text-underline-offset: 3px;
   }
   .timeline-step-cta svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+  /* SustainOS AILab section label — pill badge with pulsing Lime dot (builder-specified Lime accent) */
+  .ailab-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--tc-lime);
+    background: transparent;
+    padding: 6px 14px;
+    margin-bottom: var(--tc-space-md);
+    font-family: var(--tc-font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tc-ink);
+  }
+  .ailab-badge-dot {
+    color: var(--tc-lime);
+    font-size: 10px;
+    line-height: 1;
+    animation: ailab-pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes ailab-pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.15; }
+  }
 
   /* ── FOOTER ──────────────────────────────────────────────────────────── */
   .footer {
@@ -860,12 +887,12 @@
         <h2 class="tc-h2" style="max-width:440px;">
           This is driven by regulation, and by ambition.
         </h2>
-        <p class="tc-body mt-lg" style="color:var(--tc-stone);">
+        <p class="tc-body mt-lg" style="color:var(--tc-text-muted);">
           72% of The Corporate's total carbon footprint sits in our value chain — in the products
           and services our Tier 1 suppliers provide. Reaching Net-Zero by 2045 is not possible
           without visibility into, and collaboration with, our supply base.
         </p>
-        <p class="tc-body mt-md" style="color:var(--tc-stone);">
+        <p class="tc-body mt-md" style="color:var(--tc-text-muted);">
           This assessment is the foundation of that visibility. It is aligned with the EU's
           Corporate Sustainability Reporting Directive (CSRD) and the European Sustainability
           Reporting Standards (ESRS), both of which require companies to report on value chain
@@ -912,7 +939,7 @@
     <div class="tree-header">
       <p class="tc-subhead mb-md">Your Submission Path</p>
       <h2 class="tc-h2">Two routes. One destination.</h2>
-      <p class="tc-body mt-md" style="color:var(--tc-stone); font-size:14px;">
+      <p class="tc-body mt-md" style="color:var(--tc-text-muted); font-size:14px;">
         We respect your time. If you already hold a current EcoVadis Scorecard,
         you have an expedited path. Answer the question below to find out where to start.
       </p>
@@ -970,7 +997,7 @@
         <a href="assets/The_Corporate_Supplier_Questionnaire_2026.xlsx" download class="tc-btn-secondary" style="width:100%; text-align:center; display:block; padding:14px;">
           Download Questionnaire (Excel)
         </a>
-        <p style="font-size:11px; color:var(--tc-stone); letter-spacing:0.08em; margin-top:10px; text-align:center;">
+        <p style="font-size:11px; color:var(--tc-text-muted); letter-spacing:0.08em; margin-top:10px; text-align:center;">
           Return completed file to sustainability@thecorporate.com
         </p>
       </div>
@@ -988,30 +1015,30 @@
 <!-- ── SUSTAINOS AILAB ────────────────────────────────────────────────────── -->
 <section class="section-timeline" id="timeline">
   <div class="tc-page">
-    <p class="tc-subhead mb-md">SustainOS AILab</p>
-    <h2 class="tc-h2">I built this. No coding background.</h2>
-    <p class="tc-body mt-md" style="color:var(--tc-stone);">
-      A sustainability manager who learned to build real web tools. You can too.
+    <div class="ailab-badge"><span class="ailab-badge-dot">&#9679;</span>SustainOS AILab</div>
+    <h2 class="tc-h2">I built this supplier engagement portal. Zero coding.</h2>
+    <p class="tc-body mt-md" style="color:var(--tc-text-muted);">
+      AI closed the gap between sustainability expertise and technical execution. Now professionals build what they know.
     </p>
 
     <div class="timeline mt-xl">
       <div class="timeline-step active">
         <div class="timeline-step-num">01</div>
         <div class="timeline-step-title">The Proof</div>
-        <div class="timeline-step-body">You just used a tool built by a sustainability professional with zero coding background. Six workshops. Real deployment.</div>
+        <div class="timeline-step-body">This portal was one of the first tools non-technical sustainability professionals built inside the AILab.</div>
         <div class="timeline-step-date">SustainOS AILab</div>
       </div>
       <div class="timeline-step">
         <div class="timeline-step-num">02</div>
         <div class="timeline-step-title">Think Like an Architect</div>
-        <div class="timeline-step-body">You don't need to become a developer. You need to become an architect. Spec the tool, direct the build, ship the MVP. Then keep going.</div>
+        <div class="timeline-step-body">Most people think they need to learn coding to benefit from AI. That's the wrong goal. Architects design the solution. Claude Code builds it.</div>
         <div class="timeline-step-date">Not Your Last Build</div>
       </div>
       <div class="timeline-step timeline-step--terracotta">
         <div class="timeline-step-num">03</div>
         <div class="timeline-step-title">Cohort 1 Is Full</div>
         <div class="timeline-step-body">The first cohort is wrapping up. Limited spots were gone quickly.</div>
-        <div class="timeline-step-date">Closing Soon</div>
+        <div class="timeline-step-date">Registration Closed</div>
       </div>
       <div class="timeline-step timeline-step--purple">
         <div class="timeline-step-num">04</div>
